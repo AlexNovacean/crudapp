@@ -1,7 +1,7 @@
 version: '3'
 services:
   appcontainer:
-    image: appimage:latest
+    image: novacean/appimage:latest
     ports:
       - 8080:8080
     depends_on:
@@ -11,7 +11,7 @@ services:
         aliases:
             - appcontainer
   dbcontainer:
-    image: postgres:latest
+    image: novacean/postgres:latest
     networks:
       appnetwork:
         aliases:
