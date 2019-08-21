@@ -8,7 +8,6 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 
-
 @Route
 public class MainView extends VerticalLayout {
 
@@ -22,7 +21,6 @@ public class MainView extends VerticalLayout {
         this.service = service;
         form = new CustomerForm(this::onSave, this::onDelete);
         filterText.setPlaceholder("Filter by name...");
-//        filterText.setClearButtonVisible(true);
         filterText.setValueChangeMode(ValueChangeMode.EAGER);
         filterText.addValueChangeListener(e -> updateList());
 
@@ -65,5 +63,4 @@ public class MainView extends VerticalLayout {
         service.delete(customer);
         updateList();
     }
-
 }
